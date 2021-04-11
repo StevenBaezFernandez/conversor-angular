@@ -1,0 +1,138 @@
+<div class="unit-convertion">
+    <div class="unit">
+        <p class="unit-title">{{ unidad[0] }}</p>
+        <div class="unit-select">
+            <p (click)="toggleView()">{{ unidad[1] }} <i class="fas fa-angle-down"></i></p>
+
+            
+            <div class="content-select" [ngClass]="{'hide':menuView}">
+                <div>
+                    <p (click)="mostrar($event)">Nanometro</p>
+                    <p (click)="mostrar($event)">Micrometro</p>
+                    <p (click)="mostrar($event)">Milimetro</p>
+                    <p (click)="mostrar($event)">Centimetro</p>
+                    <p (click)="mostrar($event)">Metro</p>
+                </div>
+                <div>
+                    <p (click)="mostrar($event)">Pulgada</p>
+                    <p (click)="mostrar($event)">Pie</p>
+                    <p (click)="mostrar($event)">Yarda</p>
+                    <p (click)="mostrar($event)">Milla</p>
+                    <p (click)="mostrar($event)">Milla Nautica</p>
+                </div>
+                
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="value">
+        <input type="number" [value]="valorAConvertir" (keyup)="obtenerValorInput($event)">
+    </div>
+</div>
+<h2 class="tabla-equiv">Tabla de equivalencias</h2>
+<div class="unit-res">
+    <div>
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Nanometro</p>
+                <p class="symbol">NM</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.nanometro }}</p>
+            </div>
+        </div>
+    
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Milimetro</p>
+                <p class="symbol">MM</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.milimetro }}</p>
+            </div>
+        </div>
+    
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Micrometro</p>
+                <p class="symbol">μm</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.micrometro }}</p>
+            </div>
+        </div>
+    
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Centimetro</p>
+                <p class="symbol">CM</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.centimetro }}</p>
+            </div>
+        </div>
+    
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Metro</p>
+                <p class="symbol">M</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.metro }}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">pulgada</p>
+                <p class="symbol">IN</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.pulgada }}</p>
+            </div>
+        </div>
+    
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Pie</p>
+                <p class="symbol">FT</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.pie }}</p>
+            </div>
+        </div>
+    
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">Yarda</p>
+                <p class="symbol">Yd</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.yarda }}</p>
+            </div>
+        </div>
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">MILLA</p>
+                <p class="symbol">M</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.milla.toFixed(10) }}</p>
+            </div>
+        </div>
+        <div class="res">
+            <div class="left">
+                <p class="unit-name">MILLA NAUTIVA</p>
+                <p class="symbol">MN</p>
+            </div>
+            <div class="right">
+                <p class="value-conv">{{ valorUnit.millaNautica }}</p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</div>
